@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <title>Dark Mode</title>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <div
+        class="mt-10 bg-white dark:bg-slate-900 rounded-xl px-6 py-8 shadow-xl"
+      >
+        <h3 class="text-slate-900 dark:text-white font-medium tracking-tight">
+          The Importance of Emotional Intelligence in the Workplace
+        </h3>
+        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+          In today's fast-paced and interconnected world, emotional intelligence
+          (EI) has become a crucial skill in the workplace. Unlike traditional
+          measures of intelligence, which focus on logical reasoning and
+          technical ability, emotional intelligence is about understanding and
+          managing one's emotions, as well as recognizing and influencing the
+          emotions of others. This ability is increasingly valued by employers
+          because it contributes to a positive work environment, enhances
+          teamwork, and improves communication. Employees with high emotional
+          intelligence are typically better at handling stress, resolving
+          conflicts, and adapting to change, which are essential skills in
+          dynamic work environments. Furthermore, leaders with strong EI can
+          inspire and motivate their teams, fostering greater engagement and
+          productivity. As a result, many organizations are now prioritizing
+          emotional intelligence in their hiring and professional development
+          practices, recognizing it as a key factor in organizational success.
+        </p>
+      </div>
+      <div>
+        <label class="inline-flex items-center cursor-pointer mt-6">
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            class="sr-only peer"
+          />
+          <div
+            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-slate-900 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-slate-900"
+          ></div>
+        </label>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("toggle").addEventListener("change", function () {
+        if (this.checked) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Credit for toggle button style
+https://tailwindcomponents.com/component/toggle-switch
+ -->
